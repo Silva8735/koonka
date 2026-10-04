@@ -50,7 +50,7 @@ export const PaymentMethodsStrip: React.FC = () => {
           <div className="flex items-center gap-2 shrink-0">
             <span className="text-xl">{t.flag}</span>
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-400 block">
                 Métodos Locais de Pagamento
               </span>
               <span className="text-[11px] text-slate-400 font-medium">
@@ -63,13 +63,13 @@ export const PaymentMethodsStrip: React.FC = () => {
             {getMethods().map((m, idx) => (
               <div
                 key={idx}
-                className="bg-slate-950/80 border border-slate-800 hover:border-emerald-500/50 rounded-xl px-3 py-2 text-xs transition-colors flex items-center gap-2"
+                className="bg-slate-950/80 border border-slate-800 hover:border-orange-500/50 rounded-xl px-3 py-2 text-xs transition-colors flex items-center gap-2"
               >
                 <div>
                   <span className="font-bold text-white block">{m.name}</span>
                   <span className="text-[10px] text-slate-400">{m.sub}</span>
                 </div>
-                <span className="text-[9px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/20">
+                <span className="text-[9px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-400 px-1.5 py-0.5 rounded border border-orange-500/20">
                   {m.tag}
                 </span>
               </div>

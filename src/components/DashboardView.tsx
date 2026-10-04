@@ -61,9 +61,9 @@ export const DashboardView: React.FC = () => {
           <button
             type="button"
             onClick={() => openCheckout()}
-            className="inline-flex items-center gap-1.5 bg-[#059669] hover:bg-emerald-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg shadow-sm transition-colors"
+            className="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg shadow-sm transition-colors"
           >
-            <ShoppingBag className="w-4 h-4 text-emerald-100" />
+            <ShoppingBag className="w-4 h-4 text-orange-100" />
             <span>Testar Checkout</span>
           </button>
         </div>

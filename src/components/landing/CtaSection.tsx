@@ -10,11 +10,11 @@ export const CtaSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative select-none overflow-hidden">
       {/* Decorative gradient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gradient-to-r from-emerald-600/20 via-teal-500/15 to-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gradient-to-r from-orange-600/20 via-teal-500/15 to-amber-500/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-xs font-semibold text-emerald-400 shadow-inner">
-          <Zap className="w-3.5 h-3.5 fill-emerald-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-950/60 border border-orange-500/30 text-xs font-semibold text-orange-400 shadow-inner">
+          <Zap className="w-3.5 h-3.5 fill-orange-400" />
           <span>Comece hoje sem mensalidade</span>
         </div>
 
@@ -30,7 +30,7 @@ export const CtaSection: React.FC = () => {
           <button
             type="button"
             onClick={() => openAuth('signup')}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-xl shadow-emerald-900/40 hover:scale-[1.02] transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-xl shadow-orange-900/40 hover:scale-[1.02] transition-all cursor-pointer"
           >
             <span>Criar conta grátis agora</span>
             <ArrowRight className="w-4 h-4" />

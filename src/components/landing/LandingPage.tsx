@@ -16,7 +16,7 @@ import { DemoBar } from '../DemoBar';
 
 export const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-orange-500 selection:text-white">
       {/* Simulation Bar at the top to easily test features */}
       <DemoBar />
 

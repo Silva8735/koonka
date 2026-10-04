@@ -141,12 +141,12 @@ export const SignupPage: React.FC = () => {
 
       <div className="flex-1 flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
         <Link to="/" className="mb-8 flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-900/40 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-teal-400 flex items-center justify-center shadow-lg shadow-orange-900/40 group-hover:scale-105 transition-transform">
             <span className="font-black text-2xl text-white">K</span>
           </div>
           <span className="font-black text-2xl tracking-tight text-white flex items-center gap-1">
             <span>koonka</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
           </span>
         </Link>
 
@@ -181,7 +181,7 @@ export const SignupPage: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center text-slate-300">
                   <span>Saques liberados para:</span>
-                  <span className="font-bold text-emerald-400">{t.methodsSummary.split('·')[0]}</span>
+                  <span className="font-bold text-orange-400">{t.methodsSummary.split('·')[0]}</span>
                 </div>
               </div>
 
@@ -201,7 +201,7 @@ export const SignupPage: React.FC = () => {
                   <h1 className="text-2xl font-extrabold text-white tracking-tight">
                     Criar conta grátis
                   </h1>
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-orange-400 border border-slate-700">
                     Passo {signupStep} de 2
                   </span>
                 </div>
@@ -215,7 +215,7 @@ export const SignupPage: React.FC = () => {
               {/* Progress */}
               <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                 <div
-                  className={`bg-emerald-500 h-full transition-all duration-300 ${
+                  className={`bg-orange-500 h-full transition-all duration-300 ${
                     signupStep === 1 ? 'w-1/2' : 'w-full'
                   }`}
                 />
@@ -250,7 +250,7 @@ export const SignupPage: React.FC = () => {
                           onClick={() => setSignupCountry(c.code)}
                           className={`p-2.5 rounded-xl border text-xs text-center transition-colors ${
                             signupCountry === c.code
-                              ? 'bg-emerald-950/70 border-emerald-500 text-emerald-300 font-bold'
+                              ? 'bg-orange-950/70 border-orange-500 text-orange-300 font-bold'
                               : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
                           }`}
                         >
@@ -275,7 +275,7 @@ export const SignupPage: React.FC = () => {
                         value={signupName}
                         onChange={(e) => setSignupName(e.target.value)}
                         placeholder="Admin Silva"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                       />
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export const SignupPage: React.FC = () => {
                         value={signupEmail}
                         onChange={(e) => setSignupEmail(e.target.value)}
                         placeholder="admin.silva@koonka.com"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                       />
                     </div>
                   </div>
@@ -302,7 +302,7 @@ export const SignupPage: React.FC = () => {
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-slate-300 block">{t.phoneLabel}</label>
                     <div className="flex gap-2">
-                      <span className="px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs font-mono text-emerald-400 font-bold shrink-0 flex items-center">
+                      <span className="px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs font-mono text-orange-400 font-bold shrink-0 flex items-center">
                         {t.phonePrefix}
                       </span>
                       <input
@@ -311,7 +311,7 @@ export const SignupPage: React.FC = () => {
                         value={signupPhone}
                         onChange={(e) => setSignupPhone(e.target.value)}
                         placeholder="84 912 3456"
-                        className="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                        className="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                       />
                     </div>
                   </div>
@@ -329,7 +329,7 @@ export const SignupPage: React.FC = () => {
                         value={signupPassword}
                         onChange={(e) => setSignupPassword(e.target.value)}
                         placeholder="Mínimo 6 caracteres"
-                        className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                        className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                       />
                       <button
                         type="button"
@@ -358,7 +358,7 @@ export const SignupPage: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Avançar para o Passo 2</span>
                     <ArrowRight className="w-4 h-4" />
@@ -373,7 +373,7 @@ export const SignupPage: React.FC = () => {
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {[
-                        { id: 'digital', title: 'Vender Produtos Digitais', desc: 'Cursos, e-books, mentorias', icon: <BookOpen className="w-4 h-4 text-emerald-400" /> },
+                        { id: 'digital', title: 'Vender Produtos Digitais', desc: 'Cursos, e-books, mentorias', icon: <BookOpen className="w-4 h-4 text-orange-400" /> },
                         { id: 'fisico', title: 'Vender Produtos Físicos', desc: 'Com entrega & estafetas COD', icon: <Package className="w-4 h-4 text-amber-400" /> },
                         { id: 'servico', title: 'Oferecer Serviços', desc: 'Consultorias, design, aulas', icon: <Briefcase className="w-4 h-4 text-cyan-400" /> },
                         { id: 'afiliado', title: 'Ser Afiliado', desc: 'Promover e receber comissão', icon: <Users className="w-4 h-4 text-purple-400" /> },
@@ -384,7 +384,7 @@ export const SignupPage: React.FC = () => {
                           onClick={() => setSignupIntent(item.id)}
                           className={`p-2.5 rounded-xl border cursor-pointer transition-all flex items-start gap-2.5 ${
                             signupIntent === item.id
-                              ? 'bg-emerald-950/70 border-emerald-500 text-white'
+                              ? 'bg-orange-950/70 border-orange-500 text-white'
                               : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'
                           }`}
                         >
@@ -407,7 +407,7 @@ export const SignupPage: React.FC = () => {
                       value={signupNiche}
                       onChange={(e) => setSignupNiche(e.target.value)}
                       placeholder="Ex: Marketing Digital, Moda, Saúde, Finanças..."
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                   </div>
 
@@ -415,10 +415,10 @@ export const SignupPage: React.FC = () => {
                   <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-2">
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-semibold text-slate-200 flex items-center gap-1.5">
-                        <Smartphone className="w-4 h-4 text-emerald-400" />
+                        <Smartphone className="w-4 h-4 text-orange-400" />
                         Código OTP de Verificação
                       </span>
-                      <span className="text-[10px] font-mono text-emerald-400 font-bold">
+                      <span className="text-[10px] font-mono text-orange-400 font-bold">
                         {t.phonePrefix} {signupPhone}
                       </span>
                     </div>
@@ -432,7 +432,7 @@ export const SignupPage: React.FC = () => {
                       value={signupOtpCode}
                       onChange={(e) => setSignupOtpCode(e.target.value)}
                       placeholder="123456"
-                      className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-900 border border-slate-700 text-emerald-400 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-900 border border-slate-700 text-orange-400 focus:outline-hidden focus:border-orange-500"
                     />
                   </div>
 
@@ -443,7 +443,7 @@ export const SignupPage: React.FC = () => {
                       id="signup_terms"
                       checked={signupTermsAccepted}
                       onChange={(e) => setSignupTermsAccepted(e.target.checked)}
-                      className="mt-0.5 rounded bg-slate-950 border-slate-700 text-emerald-500 focus:ring-0"
+                      className="mt-0.5 rounded bg-slate-950 border-slate-700 text-orange-500 focus:ring-0"
                     />
                     <label htmlFor="signup_terms" className="text-[11px] text-slate-300 leading-snug cursor-pointer select-none">
                       Li e concordo com os <strong>Termos de Serviço</strong> e <strong>Política de Privacidade</strong> da Koonka.
@@ -463,7 +463,7 @@ export const SignupPage: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="flex-1 py-3.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
+                      className="flex-1 py-3.5 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
                     >
                       {isLoading ? <span>Criando conta...</span> : <span>Concluir e Criar Conta</span>}
                       <ArrowRight className="w-4 h-4" />
@@ -474,7 +474,7 @@ export const SignupPage: React.FC = () => {
 
               <div className="pt-2 text-center text-xs text-slate-400">
                 Já tem conta?{' '}
-                <Link to="/entrar" className="text-emerald-400 font-bold hover:underline">
+                <Link to="/entrar" className="text-orange-400 font-bold hover:underline">
                   Fazer login
                 </Link>
               </div>

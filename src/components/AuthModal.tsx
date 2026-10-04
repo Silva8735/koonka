@@ -291,7 +291,7 @@ export const AuthModal: React.FC = () => {
               </div>
               <div className="flex justify-between items-center text-slate-300">
                 <span>Comunidade:</span>
-                <span className="font-bold text-emerald-400">Desbloqueada</span>
+                <span className="font-bold text-orange-400">Desbloqueada</span>
               </div>
             </div>
 
@@ -329,7 +329,7 @@ export const AuthModal: React.FC = () => {
               </div>
             )}
             {successInfo && (
-              <div className="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl text-xs text-emerald-300 flex items-start gap-2">
+              <div className="p-3 bg-orange-950/60 border border-orange-500/40 rounded-xl text-xs text-orange-300 flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <span>{successInfo}</span>
               </div>
@@ -418,7 +418,7 @@ export const AuthModal: React.FC = () => {
                         ? `${t.phonePrefix} 84 123 4567`
                         : 'seuemail@exemplo.com ou +258 84...'
                     }
-                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                   />
                 </div>
               </div>
@@ -431,7 +431,7 @@ export const AuthModal: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setInternalMode('forgot')}
-                      className="text-[11px] text-emerald-400 hover:underline"
+                      className="text-[11px] text-orange-400 hover:underline"
                     >
                       Esqueci a palavra-passe
                     </button>
@@ -446,7 +446,7 @@ export const AuthModal: React.FC = () => {
                       value={loginPassword}
                       onChange={(e) => setLoginPassword(e.target.value)}
                       placeholder="••••••••"
-                      className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                     <button
                       type="button"
@@ -470,7 +470,7 @@ export const AuthModal: React.FC = () => {
                       value={loginOtpCode}
                       onChange={(e) => setLoginOtpCode(e.target.value)}
                       placeholder="123456"
-                      className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-950 border border-emerald-500/80 text-emerald-400 focus:outline-hidden"
+                      className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-950 border border-orange-500/80 text-orange-400 focus:outline-hidden"
                     />
                     <span className="text-[10px] text-slate-500 block text-center">
                       Código de demonstração: <strong>123456</strong>
@@ -487,7 +487,7 @@ export const AuthModal: React.FC = () => {
                     id="remember_me"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="rounded bg-slate-950 border-slate-700 text-emerald-500 focus:ring-0"
+                    className="rounded bg-slate-950 border-slate-700 text-orange-500 focus:ring-0"
                   />
                   <label htmlFor="remember_me" className="text-xs text-slate-300 select-none cursor-pointer">
                     Lembrar-me neste dispositivo
@@ -499,7 +499,7 @@ export const AuthModal: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
+                className="w-full py-3 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
               >
                 {isLoading ? (
                   <span>A processar...</span>
@@ -521,7 +521,7 @@ export const AuthModal: React.FC = () => {
                   setSignupStep(1);
                   setErrorMessage(null);
                 }}
-                className="text-emerald-400 font-bold hover:underline"
+                className="text-orange-400 font-bold hover:underline"
               >
                 Criar conta grátis
               </button>
@@ -537,7 +537,7 @@ export const AuthModal: React.FC = () => {
                 <h3 className="text-2xl font-extrabold text-white tracking-tight">
                   Criar conta grátis
                 </h3>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-orange-400 border border-slate-700">
                   Passo {signupStep} de 2
                 </span>
               </div>
@@ -551,7 +551,7 @@ export const AuthModal: React.FC = () => {
             {/* Step Progress Bar */}
             <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
               <div
-                className={`bg-emerald-500 h-full transition-all duration-300 ${
+                className={`bg-orange-500 h-full transition-all duration-300 ${
                   signupStep === 1 ? 'w-1/2' : 'w-full'
                 }`}
               />
@@ -586,7 +586,7 @@ export const AuthModal: React.FC = () => {
                         onClick={() => setSignupCountry(c.code)}
                         className={`p-2 rounded-xl border text-xs text-center transition-colors ${
                           signupCountry === c.code
-                            ? 'bg-emerald-950/60 border-emerald-500 text-emerald-300 font-bold'
+                            ? 'bg-orange-950/60 border-orange-500 text-orange-300 font-bold'
                             : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
                         }`}
                       >
@@ -611,7 +611,7 @@ export const AuthModal: React.FC = () => {
                       value={signupName}
                       onChange={(e) => setSignupName(e.target.value)}
                       placeholder="Admin Silva"
-                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                   </div>
                 </div>
@@ -629,7 +629,7 @@ export const AuthModal: React.FC = () => {
                       value={signupEmail}
                       onChange={(e) => setSignupEmail(e.target.value)}
                       placeholder="admin.silva@koonka.com"
-                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                   </div>
                 </div>
@@ -638,7 +638,7 @@ export const AuthModal: React.FC = () => {
                 <div className="space-y-1.5">
                   <label className="text-xs font-semibold text-slate-300 block">{t.phoneLabel}</label>
                   <div className="flex gap-2">
-                    <span className="px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs font-mono text-emerald-400 font-bold shrink-0 flex items-center">
+                    <span className="px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs font-mono text-orange-400 font-bold shrink-0 flex items-center">
                       {t.phonePrefix}
                     </span>
                     <input
@@ -647,7 +647,7 @@ export const AuthModal: React.FC = () => {
                       value={signupPhone}
                       onChange={(e) => setSignupPhone(e.target.value)}
                       placeholder="84 912 3456"
-                      className="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                   </div>
                 </div>
@@ -665,7 +665,7 @@ export const AuthModal: React.FC = () => {
                       value={signupPassword}
                       onChange={(e) => setSignupPassword(e.target.value)}
                       placeholder="Pelo menos 6 caracteres"
-                      className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                      className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                     />
                     <button
                       type="button"
@@ -695,7 +695,7 @@ export const AuthModal: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Continuar para o Passo 2</span>
                   <ArrowRight className="w-4 h-4" />
@@ -710,7 +710,7 @@ export const AuthModal: React.FC = () => {
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {[
-                      { id: 'digital', title: 'Produtos Digitais', desc: 'Cursos, e-books, mentorias', icon: <BookOpen className="w-4 h-4 text-emerald-400" /> },
+                      { id: 'digital', title: 'Produtos Digitais', desc: 'Cursos, e-books, mentorias', icon: <BookOpen className="w-4 h-4 text-orange-400" /> },
                       { id: 'fisico', title: 'Produtos Físicos', desc: 'Com entrega e COD', icon: <Package className="w-4 h-4 text-amber-400" /> },
                       { id: 'servico', title: 'Oferecer Serviços', desc: 'Consultoria, freelancing', icon: <Briefcase className="w-4 h-4 text-cyan-400" /> },
                       { id: 'afiliado', title: 'Ser Afiliado', desc: 'Promover e ganhar comissões', icon: <Users className="w-4 h-4 text-purple-400" /> },
@@ -721,7 +721,7 @@ export const AuthModal: React.FC = () => {
                         onClick={() => setSignupIntent(item.id)}
                         className={`p-2.5 rounded-xl border cursor-pointer transition-all flex items-start gap-2.5 ${
                           signupIntent === item.id
-                            ? 'bg-emerald-950/70 border-emerald-500 text-white'
+                            ? 'bg-orange-950/70 border-orange-500 text-white'
                             : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'
                         }`}
                       >
@@ -745,7 +745,7 @@ export const AuthModal: React.FC = () => {
                     value={signupNiche}
                     onChange={(e) => setSignupNiche(e.target.value)}
                     placeholder="Ex: Saúde, Negócios, Gastronomia, Moda..."
-                    className="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                    className="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                   />
                 </div>
 
@@ -753,10 +753,10 @@ export const AuthModal: React.FC = () => {
                 <div className="bg-slate-950 p-3.5 rounded-2xl border border-slate-800 space-y-2">
                   <div className="flex items-center justify-between text-xs">
                     <span className="font-semibold text-slate-200 flex items-center gap-1.5">
-                      <Smartphone className="w-4 h-4 text-emerald-400" />
+                      <Smartphone className="w-4 h-4 text-orange-400" />
                       Verificação do Telemóvel
                     </span>
-                    <span className="text-[10px] font-mono text-emerald-400 font-bold">
+                    <span className="text-[10px] font-mono text-orange-400 font-bold">
                       {t.phonePrefix} {signupPhone}
                     </span>
                   </div>
@@ -770,7 +770,7 @@ export const AuthModal: React.FC = () => {
                     value={signupOtpCode}
                     onChange={(e) => setSignupOtpCode(e.target.value)}
                     placeholder="123456"
-                    className="w-full text-center tracking-widest text-base font-mono py-2 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-hidden focus:border-emerald-500"
+                    className="w-full text-center tracking-widest text-base font-mono py-2 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-hidden focus:border-orange-500"
                   />
                 </div>
 
@@ -781,7 +781,7 @@ export const AuthModal: React.FC = () => {
                     id="terms_agree"
                     checked={signupTermsAccepted}
                     onChange={(e) => setSignupTermsAccepted(e.target.checked)}
-                    className="mt-0.5 rounded bg-slate-950 border-slate-700 text-emerald-500 focus:ring-0"
+                    className="mt-0.5 rounded bg-slate-950 border-slate-700 text-orange-500 focus:ring-0"
                   />
                   <label htmlFor="terms_agree" className="text-[11px] text-slate-300 leading-snug cursor-pointer select-none">
                     Aceito os <strong>Termos de Uso</strong> e a <strong>Política de Privacidade</strong> da plataforma Koonka.
@@ -801,7 +801,7 @@ export const AuthModal: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
+                    className="flex-1 py-3 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {isLoading ? <span>Criando conta...</span> : <span>Concluir Cadastro</span>}
                     <ArrowRight className="w-4 h-4" />
@@ -819,7 +819,7 @@ export const AuthModal: React.FC = () => {
                   setInternalMode('login');
                   setErrorMessage(null);
                 }}
-                className="text-emerald-400 font-bold hover:underline"
+                className="text-orange-400 font-bold hover:underline"
               >
                 Entrar
               </button>
@@ -840,7 +840,7 @@ export const AuthModal: React.FC = () => {
             </div>
 
             {successInfo ? (
-              <div className="p-4 bg-emerald-950/60 border border-emerald-500/40 rounded-2xl text-xs text-emerald-300 space-y-3">
+              <div className="p-4 bg-orange-950/60 border border-orange-500/40 rounded-2xl text-xs text-orange-300 space-y-3">
                 <div className="flex items-center gap-2 font-bold text-white">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                   <span>Instruções enviadas!</span>
@@ -851,7 +851,7 @@ export const AuthModal: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setInternalMode('login')}
-                  className="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs"
+                  className="w-full py-2 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-xl text-xs"
                 >
                   Voltar para o login
                 </button>
@@ -866,14 +866,14 @@ export const AuthModal: React.FC = () => {
                     type="text"
                     required
                     placeholder="seuemail@exemplo.com ou +258 84..."
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
+                  className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
                 >
                   {isLoading ? 'A enviar...' : 'Enviar link de recuperação'}
                 </button>

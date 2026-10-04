@@ -17,14 +17,14 @@ export const BenefitsSection: React.FC = () => {
     {
       title: 'Receba em Moeda Local',
       description: 'Chega de perder vendas porque seu cliente não tem cartão em USD. Receba em Meticais (MZN), Kwanzas (AOA) e Reais (BRL) direto na sua conta ou carteira.',
-      icon: <DollarSign className="w-5 h-5 text-emerald-400" />,
-      color: 'from-emerald-500/20 to-teal-500/10'
+      icon: <DollarSign className="w-5 h-5 text-orange-400" />,
+      color: 'from-orange-500/20 to-teal-500/10'
     },
     {
       title: 'Checkout por WhatsApp',
       description: 'O WhatsApp é o canal onde a lusofonia fecha negócios. O cliente clica no checkout e já abre o WhatsApp com pedido pré-formatado e confirmação instantânea.',
       icon: <MessageSquare className="w-5 h-5 text-green-400" />,
-      color: 'from-green-500/20 to-emerald-500/10'
+      color: 'from-green-500/20 to-orange-500/10'
     },
     {
       title: 'Pagamento na Entrega (COD)',
@@ -56,7 +56,7 @@ export const BenefitsSection: React.FC = () => {
     <section className="py-20 bg-slate-900 text-white relative select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-orange-400">
             Diferenciais Exclusivos
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">

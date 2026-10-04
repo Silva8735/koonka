@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { DemoBar } from './DemoBar';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
+import { MobileBottomNav } from './MobileBottomNav';
 import { DashboardView } from './DashboardView';
 import { ProductsView } from './ProductsView';
 import { CodDeliveryView } from './CodDeliveryView';
@@ -121,13 +122,13 @@ export const DashboardPage: React.FC = () => {
 
       {/* Provisory Welcome Notice Bar requested in prompt #5 */}
       {showWelcomeNotice && (
-        <div className="bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 text-white px-4 py-2.5 border-b border-emerald-500/30 flex flex-wrap items-center justify-between gap-3 text-xs shadow-inner">
+        <div className="bg-gradient-to-r from-orange-950 via-slate-900 to-slate-950 text-white px-4 py-2.5 border-b border-orange-500/30 flex flex-wrap items-center justify-between gap-3 text-xs shadow-inner">
           <div className="flex items-center gap-2">
-            <span className="p-1 rounded-md bg-emerald-500/20 text-emerald-400">
+            <span className="p-1 rounded-md bg-orange-500/20 text-orange-400">
               <CheckCircle2 className="w-4 h-4" />
             </span>
             <div>
-              <span className="font-bold text-emerald-300">
+              <span className="font-bold text-orange-300">
                 Bem-vindo, {currentUser?.name || 'Admin Silva'}!
               </span>
               <span className="text-slate-300 ml-1.5 hidden sm:inline">
@@ -142,14 +143,14 @@ export const DashboardPage: React.FC = () => {
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition-colors"
               title="Voltar para a página inicial"
             >
-              <Home className="w-3.5 h-3.5 text-emerald-400" />
+              <Home className="w-3.5 h-3.5 text-orange-400" />
               <span>Ver Landing Page</span>
             </Link>
 
             <button
               type="button"
               onClick={() => openCheckout()}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-xs transition-colors"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-orange-600 hover:bg-orange-500 text-white font-bold shadow-xs transition-colors"
             >
               <ShoppingBag className="w-3.5 h-3.5" />
               <span>Testar Checkout</span>
@@ -177,11 +178,14 @@ export const DashboardPage: React.FC = () => {
           <Header onToggleMobileMenu={() => setMobileMenuOpen(true)} />
 
           {/* View Container */}
-          <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+          <main className="flex-1 overflow-y-auto p-4 pb-28 sm:p-6 md:pb-6 lg:p-8">
             {renderActiveView()}
           </main>
         </div>
       </div>
+
+      {/* Navegação inferior (só telemóvel) */}
+      <MobileBottomNav onOpenMore={() => setMobileMenuOpen(true)} />
 
       {/* Global Modals */}
       <CheckoutModal />

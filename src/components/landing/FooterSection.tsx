@@ -29,12 +29,12 @@ export const FooterSection: React.FC = () => {
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-900/30">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-orange-600 to-teal-400 flex items-center justify-center shadow-lg shadow-orange-900/30">
                 <span className="font-black text-lg text-white">K</span>
               </div>
               <span className="font-black text-xl tracking-tight text-white flex items-center gap-1">
                 <span>koonka</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
               </span>
             </Link>
 
@@ -55,7 +55,7 @@ export const FooterSection: React.FC = () => {
                     onClick={() => setActiveCountry(c.code)}
                     className={`px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-1.5 transition-colors ${
                       activeCountry === c.code
-                        ? 'bg-slate-900 border-emerald-500/80 text-emerald-400 font-bold'
+                        ? 'bg-slate-900 border-orange-500/80 text-orange-400 font-bold'
                         : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white hover:bg-slate-900'
                     }`}
                   >
@@ -74,27 +74,27 @@ export const FooterSection: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#como-funciona" className="hover:text-emerald-400 transition-colors">
+                <a href="#como-funciona" className="hover:text-orange-400 transition-colors">
                   Como funciona
                 </a>
               </li>
               <li>
-                <a href="#niveis" className="hover:text-emerald-400 transition-colors">
+                <a href="#niveis" className="hover:text-orange-400 transition-colors">
                   Níveis de Vendedor
                 </a>
               </li>
               <li>
-                <a href="#pagamentos" className="hover:text-emerald-400 transition-colors">
+                <a href="#pagamentos" className="hover:text-orange-400 transition-colors">
                   Pagamentos Locais
                 </a>
               </li>
               <li>
-                <a href="#academy" className="hover:text-emerald-400 transition-colors">
+                <a href="#academy" className="hover:text-orange-400 transition-colors">
                   Koonka Academy
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-emerald-400 transition-colors">
+                <a href="#faq" className="hover:text-orange-400 transition-colors">
                   Perguntas frequentes
                 </a>
               </li>
@@ -108,22 +108,22 @@ export const FooterSection: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#termos" onClick={(e) => { e.preventDefault(); alert('Termos de Uso da plataforma Koonka.'); }} className="hover:text-emerald-400 transition-colors">
+                <a href="#termos" onClick={(e) => { e.preventDefault(); alert('Termos de Uso da plataforma Koonka.'); }} className="hover:text-orange-400 transition-colors">
                   Termos de Uso
                 </a>
               </li>
               <li>
-                <a href="#privacidade" onClick={(e) => { e.preventDefault(); alert('Política de Privacidade e Proteção de Dados (LGPD e equivalentes locais).'); }} className="hover:text-emerald-400 transition-colors">
+                <a href="#privacidade" onClick={(e) => { e.preventDefault(); alert('Política de Privacidade e Proteção de Dados (LGPD e equivalentes locais).'); }} className="hover:text-orange-400 transition-colors">
                   Política de Privacidade
                 </a>
               </li>
               <li>
-                <a href="#reembolso" onClick={(e) => { e.preventDefault(); alert('Política de Reembolso: garantia padrão de 7 a 14 dias para produtos digitais.'); }} className="hover:text-emerald-400 transition-colors">
+                <a href="#reembolso" onClick={(e) => { e.preventDefault(); alert('Política de Reembolso: garantia padrão de 7 a 14 dias para produtos digitais.'); }} className="hover:text-orange-400 transition-colors">
                   Política de Reembolso
                 </a>
               </li>
               <li>
-                <a href="#seguranca" onClick={(e) => { e.preventDefault(); alert('Segurança: Criptografia bancária TLS 1.3 ponta a ponta.'); }} className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                <a href="#seguranca" onClick={(e) => { e.preventDefault(); alert('Segurança: Criptografia bancária TLS 1.3 ponta a ponta.'); }} className="hover:text-orange-400 transition-colors flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Segurança dos Dados</span>
                 </a>
@@ -138,11 +138,11 @@ export const FooterSection: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                 <span className="text-slate-300">suporte@koonka.com</span>
               </li>
               <li className="flex items-center gap-2">
-                <MessageCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <MessageCircle className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                 <span className="text-slate-300">WhatsApp Suporte 24/7</span>
               </li>
               <li className="pt-2">

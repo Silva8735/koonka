@@ -6,6 +6,7 @@ import { LandingPage } from './components/landing/LandingPage';
 import { LoginPage } from './components/auth/LoginPage';
 import { SignupPage } from './components/auth/SignupPage';
 import { DashboardPage } from './components/DashboardPage';
+import { ProtectedRoute, PublicOnlyRoute } from './components/auth/RouteGuards';
 
 export default function App() {
   return (
@@ -17,13 +18,13 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
 
             {/* Dedicated Login Screen */}
-            <Route path="/entrar" element={<LoginPage />} />
+            <Route path="/entrar" element={<PublicOnlyRoute><LoginPage /></PublicOnlyRoute>} />
 
             {/* Dedicated Signup Screen (2 Steps + OTP) */}
             <Route path="/criar-conta" element={<SignupPage />} />
 
             {/* Seller / Producer Dashboard */}
-            <Route path="/painel" element={<DashboardPage />} />
+            <Route path="/painel" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
 
             {/* Catch-all fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />

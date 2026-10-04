@@ -21,15 +21,15 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-slate-950 via-[#0a1120] to-slate-950 text-white">
       {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-amber-500/10 via-emerald-500/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-amber-500/10 via-orange-500/15 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headlines & Call to Actions */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Pill kicker */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-semibold text-emerald-400 shadow-inner">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-semibold text-orange-400 shadow-inner">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
               <span>A 1ª Plataforma Tri-Nacional {t.flag}</span>
               <span className="text-slate-500">·</span>
               <span className="text-slate-300">Moçambique, Angola e Brasil</span>
@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
               Venda mais.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-amber-300">
                 Receba em moeda local.
               </span>{' '}
               Cresça em comunidade.
@@ -54,7 +54,7 @@ export const HeroSection: React.FC = () => {
               <button
                 type="button"
                 onClick={() => openAuth('signup')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-xl shadow-emerald-900/40 hover:scale-[1.02] transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-xl shadow-orange-900/40 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 <span>Criar conta grátis</span>
                 <ArrowRight className="w-4 h-4" />
@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
               </span>
               <span>·</span>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-emerald-400" />
+                <Clock className="w-4 h-4 text-orange-400" />
                 Comece em 2 minutos
               </span>
               <span>·</span>
@@ -91,20 +91,20 @@ export const HeroSection: React.FC = () => {
           {/* Right Column: Animated Smartphone Mockup */}
           <div className="lg:col-span-5 flex justify-center relative">
             {/* Ambient orange-solar glow behind device */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 to-emerald-500/20 rounded-full blur-2xl transform scale-90" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 to-orange-500/20 rounded-full blur-2xl transform scale-90" />
 
             {/* Phone Frame */}
-            <div className="relative w-[300px] sm:w-[320px] rounded-[36px] bg-slate-950 p-3.5 shadow-2xl border-4 border-slate-700/80 shadow-emerald-950/50">
+            <div className="relative w-[300px] sm:w-[320px] rounded-[36px] bg-slate-950 p-3.5 shadow-2xl border-4 border-slate-700/80 shadow-orange-950/50">
               {/* Dynamic Island / Speaker Notch */}
               <div className="w-24 h-4 bg-slate-900 rounded-full mx-auto mb-3" />
 
               {/* Screen Content */}
               <div className="bg-slate-900 rounded-[28px] p-4 text-xs space-y-4 border border-slate-800 overflow-hidden">
                 {/* Simulated Floating Notification with bounce animation */}
-                <div className="bg-gradient-to-r from-emerald-900/90 to-slate-900 p-3 rounded-2xl border border-emerald-500/40 shadow-lg space-y-1 transform animate-bounce duration-1000">
-                  <div className="flex items-center justify-between text-[10px] text-emerald-300 font-semibold">
+                <div className="bg-gradient-to-r from-orange-900/90 to-slate-900 p-3 rounded-2xl border border-orange-500/40 shadow-lg space-y-1 transform animate-bounce duration-1000">
+                  <div className="flex items-center justify-between text-[10px] text-orange-300 font-semibold">
                     <span className="flex items-center gap-1">
-                      <Zap className="w-3 h-3 text-emerald-400 fill-emerald-400" /> Notificação de Venda
+                      <Zap className="w-3 h-3 text-orange-400 fill-orange-400" /> Notificação de Venda
                     </span>
                     <span>Agora</span>
                   </div>
@@ -145,10 +145,10 @@ export const HeroSection: React.FC = () => {
                 <div className="bg-slate-950/80 p-3 rounded-2xl border border-slate-800 space-y-2">
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="font-semibold text-slate-200">Checkout 1-Clique Activo</span>
-                    <span className="text-emerald-400 font-bold">100% Online</span>
+                    <span className="text-orange-400 font-bold">100% Online</span>
                   </div>
 
-                  <div className="w-full bg-emerald-600/90 text-white font-bold py-2 rounded-xl text-center text-xs shadow-xs">
+                  <div className="w-full bg-orange-600/90 text-white font-bold py-2 rounded-xl text-center text-xs shadow-xs">
                     Pagar com {activeCountry === 'MZ' ? 'M-Pesa 🇲🇿' : activeCountry === 'AO' ? 'Multicaixa 🇦🇴' : 'Pix 🇧🇷'}
                   </div>
                 </div>

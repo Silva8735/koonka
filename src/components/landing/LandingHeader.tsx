@@ -36,14 +36,14 @@ export const LandingHeader: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-orange-600 to-teal-400 flex items-center justify-center shadow-lg shadow-orange-900/30 group-hover:scale-105 transition-transform">
             {/* Styled K with flame/arrow */}
             <span className="font-black text-xl text-white tracking-tighter">K</span>
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-xl tracking-tight text-white flex items-center gap-1">
               <span>koonka</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
             </span>
             <span className="text-[10px] text-slate-400 -mt-1 font-medium hidden sm:inline">
               MZ · AO · BR
@@ -53,25 +53,25 @@ export const LandingHeader: React.FC = () => {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8 text-xs font-semibold text-slate-300">
-          <a href="#como-funciona" className="hover:text-emerald-400 transition-colors">
+          <a href="#como-funciona" className="hover:text-orange-400 transition-colors">
             Como funciona
           </a>
-          <a href="#niveis" className="hover:text-emerald-400 transition-colors">
+          <a href="#niveis" className="hover:text-orange-400 transition-colors">
             Níveis & Benefícios
           </a>
-          <a href="#pagamentos" className="hover:text-emerald-400 transition-colors">
+          <a href="#pagamentos" className="hover:text-orange-400 transition-colors">
             Pagamentos Locais
           </a>
-          <a href="#academy" className="hover:text-emerald-400 transition-colors">
+          <a href="#academy" className="hover:text-orange-400 transition-colors">
             Academy
           </a>
-          <a href="#faq" className="hover:text-emerald-400 transition-colors">
+          <a href="#faq" className="hover:text-orange-400 transition-colors">
             Perguntas frequentes
           </a>
         </nav>
 
         {/* Right Zone: Country Selector + Theme + Auth Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           {/* Country Selector Dropdown */}
           <div className="relative">
             <button
@@ -99,7 +99,7 @@ export const LandingHeader: React.FC = () => {
                       setCountryDropdownOpen(false);
                     }}
                     className={`w-full text-left px-3 py-2 flex items-center justify-between hover:bg-slate-800 transition-colors ${
-                      activeCountry === c.code ? 'font-bold text-emerald-400 bg-emerald-950/40' : 'text-slate-300'
+                      activeCountry === c.code ? 'font-bold text-orange-400 bg-orange-950/40' : 'text-slate-300'
                     }`}
                   >
                     <span className="flex items-center gap-2">
@@ -128,7 +128,7 @@ export const LandingHeader: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/painel')}
-              className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-900/40 transition-all hover:scale-[1.02]"
+              className="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-orange-900/40 transition-all hover:scale-[1.02]"
             >
               <span>Aceder ao Painel</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -138,7 +138,7 @@ export const LandingHeader: React.FC = () => {
               <button
                 type="button"
                 onClick={() => openAuth('login')}
-                className="px-3.5 py-2 text-xs font-semibold text-slate-200 hover:text-white hover:bg-slate-900 rounded-lg transition-colors"
+                className="hidden sm:block px-3.5 py-2 text-xs font-semibold text-slate-200 hover:text-white hover:bg-slate-900 rounded-lg transition-colors"
               >
                 Entrar
               </button>
@@ -146,9 +146,10 @@ export const LandingHeader: React.FC = () => {
               <button
                 type="button"
                 onClick={() => openAuth('signup')}
-                className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md shadow-emerald-900/30 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-bold text-xs px-3 sm:px-4 py-2.5 rounded-xl shadow-md shadow-orange-900/30 transition-all hover:scale-[1.02]"
               >
-                <span>Criar conta grátis</span>
+                <span className="sm:hidden">Criar conta</span>
+                <span className="hidden sm:inline">Criar conta grátis</span>
               </button>
             </div>
           )}
@@ -171,35 +172,35 @@ export const LandingHeader: React.FC = () => {
             <a
               href="#como-funciona"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1.5 hover:text-emerald-400"
+              className="py-1.5 hover:text-orange-400"
             >
               Como funciona
             </a>
             <a
               href="#niveis"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1.5 hover:text-emerald-400"
+              className="py-1.5 hover:text-orange-400"
             >
               Níveis & Benefícios
             </a>
             <a
               href="#pagamentos"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1.5 hover:text-emerald-400"
+              className="py-1.5 hover:text-orange-400"
             >
               Pagamentos Locais
             </a>
             <a
               href="#academy"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1.5 hover:text-emerald-400"
+              className="py-1.5 hover:text-orange-400"
             >
               Academy
             </a>
             <a
               href="#faq"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1.5 hover:text-emerald-400"
+              className="py-1.5 hover:text-orange-400"
             >
               Perguntas frequentes
             </a>
@@ -222,7 +223,7 @@ export const LandingHeader: React.FC = () => {
                 setMobileMenuOpen(false);
                 openAuth('signup');
               }}
-              className="w-full py-2.5 text-xs font-bold text-center bg-emerald-600 hover:bg-emerald-500 rounded-xl text-white shadow-md"
+              className="w-full py-2.5 text-xs font-bold text-center bg-orange-600 hover:bg-orange-500 rounded-xl text-white shadow-md"
             >
               Criar conta grátis
             </button>

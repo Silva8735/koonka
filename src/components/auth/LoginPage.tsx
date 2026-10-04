@@ -87,12 +87,12 @@ export const LoginPage: React.FC = () => {
       <div className="flex-1 flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
         {/* Brand Header */}
         <Link to="/" className="mb-8 flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-900/40 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-teal-400 flex items-center justify-center shadow-lg shadow-orange-900/40 group-hover:scale-105 transition-transform">
             <span className="font-black text-2xl text-white">K</span>
           </div>
           <span className="font-black text-2xl tracking-tight text-white flex items-center gap-1">
             <span>koonka</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
           </span>
         </Link>
 
@@ -115,7 +115,7 @@ export const LoginPage: React.FC = () => {
           )}
 
           {info && (
-            <div className="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl text-xs text-emerald-300 flex items-start gap-2">
+            <div className="p-3 bg-orange-950/60 border border-orange-500/40 rounded-xl text-xs text-orange-300 flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <span>{info}</span>
             </div>
@@ -199,7 +199,7 @@ export const LoginPage: React.FC = () => {
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
                   placeholder="admin.silva@koonka.com"
-                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                 />
               </div>
             </div>
@@ -208,7 +208,7 @@ export const LoginPage: React.FC = () => {
               <div className="space-y-1.5">
                 <div className="flex justify-between items-center">
                   <label className="text-xs font-semibold text-slate-300">Palavra-passe</label>
-                  <span className="text-[11px] text-emerald-400 hover:underline cursor-pointer" onClick={() => setInfo('Instruções de redefinição foram enviadas para o seu e-mail.')}>
+                  <span className="text-[11px] text-orange-400 hover:underline cursor-pointer" onClick={() => setInfo('Instruções de redefinição foram enviadas para o seu e-mail.')}>
                     Esqueci a palavra-passe
                   </span>
                 </div>
@@ -222,7 +222,7 @@ export const LoginPage: React.FC = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
-                    className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-emerald-500"
+                    className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:border-orange-500"
                   />
                   <button
                     type="button"
@@ -245,7 +245,7 @@ export const LoginPage: React.FC = () => {
                     value={otpCode}
                     onChange={(e) => setOtpCode(e.target.value)}
                     placeholder="123456"
-                    className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-950 border border-emerald-500 text-emerald-400 focus:outline-hidden"
+                    className="w-full text-center tracking-widest text-lg font-mono py-2 rounded-xl bg-slate-950 border border-orange-500 text-orange-400 focus:outline-hidden"
                   />
                   <span className="text-[10px] text-slate-500 block text-center">
                     Código demo: <strong>123456</strong>
@@ -261,7 +261,7 @@ export const LoginPage: React.FC = () => {
                   id="remember_check"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded bg-slate-950 border-slate-700 text-emerald-500 focus:ring-0"
+                  className="rounded bg-slate-950 border-slate-700 text-orange-500 focus:ring-0"
                 />
                 <label htmlFor="remember_check" className="text-xs text-slate-300 select-none cursor-pointer">
                   Lembrar-me neste dispositivo
@@ -272,7 +272,7 @@ export const LoginPage: React.FC = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
+              className="w-full py-3 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-lg transition-colors cursor-pointer"
             >
               {isLoading ? (
                 <span>A processar...</span>
@@ -286,7 +286,7 @@ export const LoginPage: React.FC = () => {
 
           <div className="pt-2 text-center text-xs text-slate-400">
             Ainda não tem conta na Koonka?{' '}
-            <Link to="/criar-conta" className="text-emerald-400 font-bold hover:underline">
+            <Link to="/criar-conta" className="text-orange-400 font-bold hover:underline">
               Criar conta grátis
             </Link>
           </div>

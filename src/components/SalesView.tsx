@@ -212,7 +212,47 @@ export const SalesView: React.FC = () => {
 
       {/* Sales Table */}
       <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
-        <div className="overflow-x-auto">
+        {/* Telemóvel: cartões empilhados */}
+        <ul className="md:hidden divide-y divide-slate-100">
+          {filteredSales.map((sale) => (
+            <li key={sale.id} className="p-4 space-y-2.5">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <span className="font-mono font-bold text-slate-900 text-xs block">{sale.code}</span>
+                  <span className="text-[11px] text-slate-400">
+                    {new Date(sale.date).toLocaleDateString('pt-BR')} às{' '}
+                    {new Date(sale.date).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                  </span>
+                </div>
+                <div className="shrink-0">{getStatusBadge(sale.status)}</div>
+              </div>
+
+              <div className="min-w-0">
+                <span className="font-semibold text-slate-900 text-sm block truncate">{sale.productName}</span>
+                <span className="text-[11px] text-slate-500 block truncate">{sale.customerName}</span>
+              </div>
+
+              <div className="flex items-center justify-between gap-3">
+                <div className="text-xs">{getMethodIcon(sale.paymentMethod)}</div>
+                <div className="text-right font-mono tabular-nums">
+                  <span className="font-bold text-slate-900 text-sm block">{formatCurrency(sale.netAmount)}</span>
+                  <span className="text-[10px] text-slate-400">Bruto: {formatCurrency(sale.grossAmount)}</span>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setSelectedSaleDetail(sale)}
+                className="w-full min-h-[44px] rounded-lg border border-slate-200 text-orange-600 font-semibold text-xs active:bg-slate-50"
+              >
+                Ver detalhes
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* PC: tabela completa */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left text-xs divide-y divide-slate-200">
             <thead className="bg-slate-50 text-slate-500 font-semibold uppercase text-[10px] tracking-wider">
               <tr>

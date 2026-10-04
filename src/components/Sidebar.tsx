@@ -61,7 +61,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) =
   const sidebarContent = (
     <div className="flex flex-col h-full bg-[#0f172a] text-slate-300 w-64 border-r border-slate-800 select-none">
       {/* Brand Header */}
-      <div className="bg-[#059669] px-4 py-3.5 flex items-center justify-between">
+      <div className="bg-[#ea580c] px-4 py-3.5 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-white/20 border border-white/30 flex items-center justify-center font-black text-white text-base shadow-sm">
             K
@@ -71,7 +71,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) =
               <span>koonka</span>
               <span className="text-[10px] bg-white/20 px-1 rounded uppercase font-mono">v1.0</span>
             </div>
-            <div className="text-[10px] text-emerald-100 font-medium">
+            <div className="text-[10px] text-orange-100 font-medium">
               Moçambique · Angola · Brasil
             </div>
           </div>
@@ -82,9 +82,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) =
       <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
         <Link
           to="/"
-          className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-xl transition-all mb-2 border border-dashed border-slate-800 hover:border-emerald-500/50"
+          className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-xl transition-all mb-2 border border-dashed border-slate-800 hover:border-orange-500/50"
         >
-          <Home className="w-4 h-4 text-emerald-400" />
+          <Home className="w-4 h-4 text-orange-400" />
           <span>Ver Página Inicial</span>
         </Link>
 
@@ -101,7 +101,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) =
               }`}
             >
               <div className="flex items-center gap-2.5 min-w-0">
-                <span className={isActive ? 'text-emerald-400' : 'text-slate-400'}>{item.icon}</span>
+                <span className={isActive ? 'text-orange-400' : 'text-slate-400'}>{item.icon}</span>
                 <span className="truncate">{item.label}</span>
               </div>
 
@@ -117,7 +117,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) =
 
       {/* Footer Info */}
       <div className="p-3.5 border-t border-slate-800/80 bg-slate-950/60 text-[11px] text-slate-400 flex items-center justify-between">
-        <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+        <div className="flex items-center gap-1.5 text-orange-400 font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Ecossistema Lusófono</span>
         </div>

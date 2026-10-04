@@ -42,7 +42,7 @@ export const SocialProofSection: React.FC = () => {
         {/* Statistics Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-16 border-b border-slate-800">
           <div className="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 text-center space-y-1">
-            <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">+3</span>
+            <span className="text-2xl sm:text-3xl font-black text-orange-400 font-mono">+3</span>
             <p className="text-xs text-slate-300 font-medium">Países Conectados (MZ, AO, BR)</p>
           </div>
           <div className="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 text-center space-y-1">
@@ -61,7 +61,7 @@ export const SocialProofSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mt-14 mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-orange-400">
             Prova Social & Casos de Sucesso
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
@@ -91,7 +91,7 @@ export const SocialProofSection: React.FC = () => {
                     <div>
                       <h3 className="text-sm font-bold text-white">{t.name}</h3>
                       <p className="text-[11px] text-slate-400">{t.role}</p>
-                      <p className="text-[10px] text-emerald-400 font-medium">{t.location}</p>
+                      <p className="text-[10px] text-orange-400 font-medium">{t.location}</p>
                     </div>
                   </div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-amber-400 border border-slate-700">
@@ -113,7 +113,7 @@ export const SocialProofSection: React.FC = () => {
               </div>
 
               {/* Bottom metric badge */}
-              <div className="pt-3 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-bold text-emerald-400">
+              <div className="pt-3 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-bold text-orange-400">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
                 <span>{t.metric}</span>
               </div>

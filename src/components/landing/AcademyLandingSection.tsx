@@ -22,7 +22,7 @@ export const AcademyLandingSection: React.FC = () => {
       subtitle: 'Meta Ads, TikTok e WhatsApp',
       desc: 'Como atrair clientes qualificados gastando pouco em Moçambique, Angola e Brasil.',
       lessons: '18 aulas práticas',
-      icon: <TrendingUp className="w-5 h-5 text-emerald-400" />
+      icon: <TrendingUp className="w-5 h-5 text-orange-400" />
     },
     {
       title: 'Copywriting de Alta Conversão',

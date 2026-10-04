@@ -12,7 +12,7 @@ export const HowItWorksSection: React.FC = () => {
       step: '01',
       title: 'Crie a sua conta grátis',
       description: 'Leva apenas 2 minutos. Escolha o seu país (Moçambique, Angola ou Brasil) e defina como deseja receber.',
-      icon: <UserPlus className="w-6 h-6 text-emerald-400" />,
+      icon: <UserPlus className="w-6 h-6 text-orange-400" />,
       detail: 'Sem cartão de crédito · Sem mensalidade'
     },
     {
@@ -35,7 +35,7 @@ export const HowItWorksSection: React.FC = () => {
     <section id="como-funciona" className="py-20 bg-slate-950 text-white relative select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-orange-400">
             Simples, Rápido e Sem Burocracia
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
@@ -69,7 +69,7 @@ export const HowItWorksSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-emerald-400 font-semibold">
+              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-orange-400 font-semibold">
                 <span>{item.detail}</span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export const HowItWorksSection: React.FC = () => {
           <button
             type="button"
             onClick={() => openAuth('signup')}
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-6 py-3 rounded-xl shadow-lg shadow-emerald-900/40 transition-all"
+            className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs px-6 py-3 rounded-xl shadow-lg shadow-orange-900/40 transition-all"
           >
             <span>Começar Agora Gratuitamente</span>
             <ArrowRight className="w-4 h-4" />

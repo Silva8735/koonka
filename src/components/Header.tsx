@@ -47,13 +47,13 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
   const currentCountryObj = countries.find((c) => c.code === activeCountry) || countries[0];
 
   return (
-    <header className="h-16 bg-[#059669] text-white flex items-center justify-between px-4 sm:px-6 shadow-md relative z-20 select-none">
+    <header className="h-16 bg-[#ea580c] text-white flex items-center justify-between px-4 sm:px-6 shadow-md relative z-20 select-none">
       {/* Left: Mobile menu & Brand */}
       <div className="flex items-center gap-3">
         <button
           type="button"
           onClick={onToggleMobileMenu}
-          className="md:hidden p-1.5 rounded-md hover:bg-emerald-700/80 transition-colors"
+          className="md:hidden p-1.5 rounded-md hover:bg-orange-700/80 transition-colors"
           aria-label="Abrir menu"
         >
           <Menu className="w-6 h-6 text-white" />
@@ -72,12 +72,12 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
           <button
             type="button"
             onClick={() => setCountryMenuOpen(!countryMenuOpen)}
-            className="flex items-center gap-1.5 bg-emerald-800/80 hover:bg-emerald-800 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-emerald-700/80 transition-all shadow-xs"
+            className="flex items-center gap-1.5 bg-orange-800/80 hover:bg-orange-800 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-orange-700/80 transition-all shadow-xs"
           >
             <span>{currentCountryObj.flag}</span>
             <span>{currentCountryObj.label}</span>
-            <span className="text-[10px] text-emerald-200 font-mono">({activeCurrency})</span>
-            <ChevronDown className="w-3 h-3 text-emerald-300" />
+            <span className="text-[10px] text-orange-200 font-mono">({activeCurrency})</span>
+            <ChevronDown className="w-3 h-3 text-orange-300" />
           </button>
 
           {countryMenuOpen && (
@@ -94,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
                     setCountryMenuOpen(false);
                   }}
                   className={`w-full text-left px-3 py-2 flex items-center justify-between hover:bg-slate-50 transition-colors ${
-                    activeCountry === c.code ? 'font-bold text-emerald-700 bg-emerald-50/60' : ''
+                    activeCountry === c.code ? 'font-bold text-orange-700 bg-orange-50/60' : ''
                   }`}
                 >
                   <span className="flex items-center gap-2">
@@ -118,7 +118,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
           className="hidden md:inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 active:bg-white/30 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/25 transition-all shadow-xs"
           title="Abrir o checkout simulado multi-país"
         >
-          <ShoppingBag className="w-4 h-4 text-emerald-100" />
+          <ShoppingBag className="w-4 h-4 text-orange-100" />
           <span>Checkout {currentCountryObj.flag}</span>
         </button>
 
@@ -126,20 +126,20 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
         <button
           type="button"
           onClick={() => setCurrentTab('niveis')}
-          className="flex flex-col justify-center items-end py-1 px-2.5 rounded-lg hover:bg-emerald-700/80 transition-colors cursor-pointer text-right group"
+          className="flex flex-col justify-center items-end py-1 px-2.5 rounded-lg hover:bg-orange-700/80 transition-colors cursor-pointer text-right group"
           title="Ver o sistema de 7 níveis da Koonka"
         >
           <div className="text-[11px] font-bold text-white tabular-nums tracking-wide flex items-center gap-1.5">
-            <span className="text-emerald-100 text-[10px] font-normal hidden sm:inline">Nível:</span>
+            <span className="text-orange-100 text-[10px] font-normal hidden sm:inline">Nível:</span>
             <span className={`px-1.5 py-0.2 rounded text-[10px] uppercase font-extrabold ${currentLevel.badgeBg} text-white shadow-xs`}>
               {currentLevel.name}
             </span>
-            <span className="font-mono text-emerald-100">(${Math.round(totalAccumulatedUsd / 1000)}k)</span>
+            <span className="font-mono text-orange-100">(${Math.round(totalAccumulatedUsd / 1000)}k)</span>
           </div>
 
           <div className="flex items-center gap-1.5 w-24 sm:w-32 mt-1">
             <Award className="w-3.5 h-3.5 text-yellow-300 shrink-0 group-hover:scale-110 transition-transform" />
-            <div className="w-full bg-emerald-900/60 rounded-full h-1.5 overflow-hidden">
+            <div className="w-full bg-orange-900/60 rounded-full h-1.5 overflow-hidden">
               <div
                 className="bg-yellow-300 h-full rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${Math.max(5, progressToNextLevelPercent)}%` }}
@@ -155,7 +155,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
             onClick={() => setProfileOpen(!profileOpen)}
             className="flex items-center gap-2 p-1 rounded-full hover:ring-2 hover:ring-white/40 transition-all focus:outline-none"
           >
-            <div className="w-9 h-9 rounded-full bg-emerald-900 text-white font-bold flex items-center justify-center border-2 border-white/60 text-xs shadow-sm overflow-hidden">
+            <div className="w-9 h-9 rounded-full bg-orange-900 text-white font-bold flex items-center justify-center border-2 border-white/60 text-xs shadow-sm overflow-hidden">
               AS
             </div>
           </button>
@@ -180,10 +180,10 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMobileMenu }) => {
                     setProfileOpen(false);
                   }}
                   className={`w-full flex items-center gap-2.5 px-4 py-2 hover:bg-slate-50 transition-colors ${
-                    userRole === 'vendedor' ? 'font-bold text-emerald-700 bg-emerald-50/50' : ''
+                    userRole === 'vendedor' ? 'font-bold text-orange-700 bg-orange-50/50' : ''
                   }`}
                 >
-                  <User className="w-4 h-4 text-emerald-600" />
+                  <User className="w-4 h-4 text-orange-600" />
                   <span>Painel do Produtor / Vendedor</span>
                 </button>
 

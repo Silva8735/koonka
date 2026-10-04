@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
-export const DemoBar: React.FC = () => {
+const DemoBarInner: React.FC = () => {
   const location = useLocation();
   const {
     activeCountry,
@@ -212,4 +212,31 @@ export const DemoBar: React.FC = () => {
       </div>
     </div>
   );
+};
+
+/**
+ * A barra de simulação só aparece:
+ *  - em desenvolvimento (npm run dev), ou
+ *  - em produção quando abre o site com ?demo=1 (fica activa nessa sessão do navegador).
+ * Para os visitantes normais fica escondida.
+ */
+const isDemoEnabled = (): boolean => {
+  if (import.meta.env.DEV) return true;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('demo') === '1') {
+      sessionStorage.setItem('koonka_demo', '1');
+    }
+    if (params.get('demo') === '0') {
+      sessionStorage.removeItem('koonka_demo');
+    }
+    return sessionStorage.getItem('koonka_demo') === '1';
+  } catch {
+    return false;
+  }
+};
+
+export const DemoBar: React.FC = () => {
+  if (!isDemoEnabled()) return null;
+  return <DemoBarInner />;
 };
