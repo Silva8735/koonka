@@ -1,0 +1,6 @@
+{
+  "name": "Koonka - Plataforma de Vendas e Checkout",
+  "description": "Plataforma de gestão de vendas, produtos digitais, checkout de alta conversão, área de membros e afiliados da Koonka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
